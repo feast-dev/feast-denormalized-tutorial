@@ -1,0 +1,22 @@
+[project]
+name = "feast-denormalized-tutorial"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "confluent-kafka>=2.6.1",
+    "denormalized[feast]>=0.0.10",
+    "feast>=0.41.3",
+]
+
+[tool.basedpyright]
+typeCheckingMode = "standard"
+
+[tool.uv.sources]
+feast-denormalized-tutorial = { workspace = true }
+
+[dependency-groups]
+dev = [
+    "feast-denormalized-tutorial",
+]
