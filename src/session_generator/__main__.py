@@ -5,7 +5,7 @@ import sys
 from random import uniform
 
 from confluent_kafka import Producer
-from login_attempt import LoginAttempt, create_login_attempt_generator
+from login_attempt import create_login_attempt_generator
 
 BOOTSTRAP_SERVERS = "localhost:9092"
 TOPIC = "fake_sessions"
@@ -24,7 +24,7 @@ def main():
 
     signal.signal(signal.SIGINT, signal_handler)
 
-    data_gen_func = create_login_attempt_generator(1000, 500)
+    data_gen_func = create_login_attempt_generator(100, 50)
 
     print("Event generator started...")
     while True:
@@ -35,7 +35,11 @@ def main():
             value=json.dumps(event.to_dict()).encode("utf-8"),
         )
 
-        time.sleep(uniform(0.001, 0.01))
+        if len(producer) > 100:
+            producer.flush()
+        else:
+            # time.sleep(uniform(0.0001, 0.001))
+            time.sleep(0.001)
 
 
 if __name__ == "__main__":
