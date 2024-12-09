@@ -381,18 +381,18 @@ wheels = [
 
 [[package]]
 name = "denormalized"
-version = "0.0.10"
+version = "0.0.12"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "datafusion" },
     { name = "pip" },
     { name = "pyarrow" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/fb/ed/a52b1b9ad5df4d870f549f1f26b86efe3c459842b85a07ef49ed772dd23a/denormalized-0.0.10.tar.gz", hash = "sha256:8e16926cdbb77802dda6027daf051a60b6d345e46bb14001e399683d9107673d", size = 244699 }
+sdist = { url = "https://files.pythonhosted.org/packages/71/33/1159b09706b3ef52b67e2f2b3f68a0cf23e3a250370671dec7eabeba7654/denormalized-0.0.12.tar.gz", hash = "sha256:f9b585f28f30d2802c81aacfeec27fb5a0f6cb0492967dc9bde73fb261e5899d", size = 245477 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a4/63/d6499178a843f5b1026f1d04938d8fbeb62b32cfcad48324e4613659913f/denormalized-0.0.10-cp38-abi3-macosx_10_12_x86_64.macosx_11_0_arm64.macosx_10_12_universal2.whl", hash = "sha256:dddc667d904db3f74aa92259a8337226201e8f43d33fb8a9c5788f41b3b17b75", size = 66753240 },
-    { url = "https://files.pythonhosted.org/packages/a6/7a/2cce59e262dca7735f38910eb0aca0caa5abddd639297191c6017955a7a5/denormalized-0.0.10-cp38-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:4bbf77c342e20e3ecdfb4fc668da68b66cc538402abaa68fe41a8f91e3d10f28", size = 24975279 },
-    { url = "https://files.pythonhosted.org/packages/16/b4/de3c2fdf56bb00bbd47eeefe06ead0c96e6963fa100965203a9b299535e9/denormalized-0.0.10-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:603deba6a6d385a514fb7f83640508621b8bc882f1cc58b48c0dc3d75d119e7f", size = 27370410 },
+    { url = "https://files.pythonhosted.org/packages/14/de/ff4c51bb1e97c5b962ba338f683a6a5c15a5818aba7df64edfeab35c2ae5/denormalized-0.0.12-cp38-abi3-macosx_10_12_x86_64.macosx_11_0_arm64.macosx_10_12_universal2.whl", hash = "sha256:a6c76d47add037eb83d271064e54dc536520c59306b0f052075b587a9eda8d76", size = 66802746 },
+    { url = "https://files.pythonhosted.org/packages/71/d6/df021054c21c20986701cbc90c0bf5153da4e356555c2cebb3b04390051f/denormalized-0.0.12-cp38-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:4072bc9ea128027d92c43ca6715fef5891d4077bafb18972b4f7937756ebf7e0", size = 25009981 },
+    { url = "https://files.pythonhosted.org/packages/46/5f/d867667ebcb9c3db025e11e81c505fb157252ff693efe308939fc93075fb/denormalized-0.0.12-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:baf9b4db09a52f2d717788f190828bb14a6f279bc37129a8ec75445e6983e5e5", size = 27396375 },
 ]
 
 [package.optional-dependencies]
@@ -443,7 +443,7 @@ wheels = [
 
 [[package]]
 name = "feast"
-version = "0.41.3"
+version = "0.42.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "bigtree" },
@@ -476,9 +476,8 @@ dependencies = [
     { name = "uvicorn", extra = ["standard"] },
     { name = "uvicorn-worker" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/39/40/ea31a695bc966630f3dbec651ecaa2a5fbd4fecbc4cbca12bab27a47bd16/feast-0.41.3.tar.gz", hash = "sha256:7f570104ae810f0e405d98444e8e6dfddae5986d70e86c7f39627f111de99214", size = 3919525 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/66/b1/fe81c406728d62184d61a9320787c8a21e16f874e8d887509bfde72376c8/feast-0.41.3-py2.py3-none-any.whl", hash = "sha256:6a0a800691cd1476533f0ee62bee55439026f85822a6de46341d90d8b88732a1", size = 5266235 },
+    { url = "https://files.pythonhosted.org/packages/34/71/e53f72cc15fb32da7c4085774ed73fb3d8087444762912ff3bcaed31077e/feast-0.42.0-py2.py3-none-any.whl", hash = "sha256:84dc7aa5132d52160922ab3a82c1f4e63e51b5cfe786ec5504e7ea7452c79f68", size = 5284245 },
 ]
 
 [[package]]
@@ -495,8 +494,8 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "confluent-kafka", specifier = ">=2.6.1" },
-    { name = "denormalized", extras = ["feast"], specifier = ">=0.0.10" },
-    { name = "feast", specifier = ">=0.41.3" },
+    { name = "denormalized", extras = ["feast"], specifier = ">=0.0.12" },
+    { name = "feast", specifier = ">=0.42.0" },
     { name = "jupyterlab", specifier = ">=4.3.1" },
 ]
 

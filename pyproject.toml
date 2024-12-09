@@ -6,10 +6,11 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "confluent-kafka>=2.6.1",
-    "denormalized[feast]>=0.0.10",
-    "feast>=0.41.3",
+    "denormalized[feast]>=0.0.12",
+    "feast>=0.42.0",
     "jupyterlab>=4.3.1",
 ]
+
 
 [tool.basedpyright]
 typeCheckingMode = "standard"
