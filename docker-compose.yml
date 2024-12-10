@@ -55,6 +55,9 @@ services:
     networks:
       - feast-demo-network
     command: pipeline --kafka-bootstrap-servers feast-demo-kafka:9092
+    volumes:
+      - ${PWD}/data:/app/src/feature_repo/data
+    cpus: 4.0
     depends_on:
       kafka:
         condition: service_healthy

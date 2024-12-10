@@ -16,5 +16,11 @@ This repository contains an example application of using [Denormalized](https://
 - Start emitting events: `python src/session_generator/`
 - Start the pipelines: `python src/pipelines/`
 
+### Docker
+
+It is also possible to run the example using the provider docker-compose file:
+
+- `docker compose up --build`
+
 The features can be viewed in realtime using the `print_features.ipynb` notebook
 `jupyter-lab`

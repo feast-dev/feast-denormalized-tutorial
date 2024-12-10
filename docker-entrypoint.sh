@@ -10,6 +10,10 @@ case "$1" in
     ;;
   "pipeline")
     shift
+    if [ -z "$(ls -A src/feature_repo/data/)" ]; then
+      echo "Data directory empty, initializing feature store..."
+      uv run python src/feature_repo
+    fi
     python -m src.pipeline "$@"
     ;;
   *)
