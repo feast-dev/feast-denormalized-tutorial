@@ -488,6 +488,10 @@ dependencies = [
     { name = "confluent-kafka" },
     { name = "denormalized", extra = ["feast"] },
     { name = "feast" },
+]
+
+[package.dev-dependencies]
+dev = [
     { name = "jupyterlab" },
 ]
 
@@ -496,11 +500,13 @@ requires-dist = [
     { name = "confluent-kafka", specifier = ">=2.6.1" },
     { name = "denormalized", extras = ["feast"], specifier = ">=0.0.12" },
     { name = "feast", specifier = ">=0.42.0" },
-    { name = "jupyterlab", specifier = ">=4.3.1" },
 ]
 
 [package.metadata.requires-dev]
-dev = [{ name = "feast-denormalized-tutorial", virtual = "." }]
+dev = [
+    { name = "feast-denormalized-tutorial", virtual = "." },
+    { name = "jupyterlab", specifier = ">=4.3.1" },
+]
 
 [[package]]
 name = "fqdn"

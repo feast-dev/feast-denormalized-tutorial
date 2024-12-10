@@ -8,7 +8,6 @@ dependencies = [
     "confluent-kafka>=2.6.1",
     "denormalized[feast]>=0.0.12",
     "feast>=0.42.0",
-    "jupyterlab>=4.3.1",
 ]
 
 
@@ -21,4 +20,5 @@ feast-denormalized-tutorial = { workspace = true }
 [dependency-groups]
 dev = [
     "feast-denormalized-tutorial",
+    "jupyterlab>=4.3.1",
 ]

@@ -1,4 +1,5 @@
 import json
+import logging
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
@@ -13,6 +14,8 @@ from feast.data_source import PushMode
 
 from session_generator.login_attempt import LoginAttempt
 
+logger = logging.getLogger(__name__)
+
 
 @dataclass
 class PipelineConfig:
@@ -24,8 +27,13 @@ class PipelineConfig:
 
 
 def run_pipeline(config: PipelineConfig):
-    print(
-        f"starting pipeline- feature: {config.feature_prefix}, window_length: {config.window_length_ms}, slide_length: {config.slide_length_ms}"
+    logger.info(
+        "starting pipeline...\n"
+        f"  feature: {config.feature_prefix}\n"
+        f"  window_length: {config.window_length_ms}\n"
+        f"  slide_length: {config.slide_length_ms}\n"
+        f"  kafka_server: {config.kafka_bootstrap_servers}\n"
+        f"  kafka_topic: {config.kafka_topic}\n"
     )
 
     login_attempt_schema = LoginAttempt(
