@@ -10,7 +10,6 @@ from denormalized.datafusion import col
 from denormalized.datafusion import functions as f
 from denormalized.datafusion import lit
 from feast import FeatureStore
-from feast.data_source import PushMode
 
 from session_generator.login_attempt import LoginAttempt
 
@@ -80,16 +79,6 @@ def run_pipeline(config: PipelineConfig):
     repo_path = Path(__file__).parent / "../feature_repo/"
     feature_service = FeatureStore(repo_path=str(repo_path.resolve()))
 
-    def _sink_to_feast(rb: pa.RecordBatch):
-        if len(rb):
-            df = rb.to_pandas()
-            try:
-                feature_service.push(
-                    f"auth_attempt_push_{config.feature_prefix}", df, to=PushMode.ONLINE
-                )
-            except Exception as e:
-                print(e)
-
-    ds.ds.sink_python(_sink_to_feast)
-
-    # ds.print_schema().write_feast_feature(feature_service, f"auth_attempt_push_{feature_prefix}")
+    ds.write_feast_feature(
+        feature_service, f"auth_attempt_push_{config.feature_prefix}"
+    )
