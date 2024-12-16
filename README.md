@@ -6,6 +6,8 @@ This repository contains an example application of using [Denormalized](https://
 
 ## Getting started
 
+[Install UV](https://docs.astral.sh/uv/getting-started/installation/)
+
 - `uv venv --python 3.12 &&  source .venv/bin/activate`
 - `uv sync --dev`
 - `uv pip install -e .`
