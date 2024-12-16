@@ -6,7 +6,7 @@ This repository contains an example application of using [Denormalized](https://
 
 ## Getting started
 
-- `uv venv --python 3.12 && .venv/bin/activate`
+- `uv venv --python 3.12 &&  source .venv/bin/activate`
 - `uv sync --dev`
 - `uv pip install -e .`
 
