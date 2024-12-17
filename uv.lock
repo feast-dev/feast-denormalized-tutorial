@@ -381,18 +381,18 @@ wheels = [
 
 [[package]]
 name = "denormalized"
-version = "0.0.12"
+version = "0.0.13"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "datafusion" },
     { name = "pip" },
     { name = "pyarrow" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/71/33/1159b09706b3ef52b67e2f2b3f68a0cf23e3a250370671dec7eabeba7654/denormalized-0.0.12.tar.gz", hash = "sha256:f9b585f28f30d2802c81aacfeec27fb5a0f6cb0492967dc9bde73fb261e5899d", size = 245477 }
+sdist = { url = "https://files.pythonhosted.org/packages/3f/82/4a6509846d231ccb4a11fe565ec49d0065f1962c22877b8d71c218a4f79f/denormalized-0.0.13.tar.gz", hash = "sha256:a95a8b8f967acbd7697ae16be75d777466a93f4d7069beaba08eec1435646059", size = 247106 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/14/de/ff4c51bb1e97c5b962ba338f683a6a5c15a5818aba7df64edfeab35c2ae5/denormalized-0.0.12-cp38-abi3-macosx_10_12_x86_64.macosx_11_0_arm64.macosx_10_12_universal2.whl", hash = "sha256:a6c76d47add037eb83d271064e54dc536520c59306b0f052075b587a9eda8d76", size = 66802746 },
-    { url = "https://files.pythonhosted.org/packages/71/d6/df021054c21c20986701cbc90c0bf5153da4e356555c2cebb3b04390051f/denormalized-0.0.12-cp38-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:4072bc9ea128027d92c43ca6715fef5891d4077bafb18972b4f7937756ebf7e0", size = 25009981 },
-    { url = "https://files.pythonhosted.org/packages/46/5f/d867667ebcb9c3db025e11e81c505fb157252ff693efe308939fc93075fb/denormalized-0.0.12-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:baf9b4db09a52f2d717788f190828bb14a6f279bc37129a8ec75445e6983e5e5", size = 27396375 },
+    { url = "https://files.pythonhosted.org/packages/61/9e/f65fb846052e6fce85af1b40e210043aaa9c13573603c5de543325afe85e/denormalized-0.0.13-cp38-abi3-macosx_10_12_x86_64.macosx_11_0_arm64.macosx_10_12_universal2.whl", hash = "sha256:19ad8b865ff4199bdbcfa074befb3c5f48c02fff1b28f02341d59a755e31fbca", size = 67127013 },
+    { url = "https://files.pythonhosted.org/packages/6f/d8/a16aeddfccb8643dab437b3175ec78ca29c0ef5c886e4f3425eb6c79491a/denormalized-0.0.13-cp38-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:c2fb052058bc018f39ccdcea0f05459717b5ed2b5f3fbb87c9d95415d3e90f49", size = 25085972 },
+    { url = "https://files.pythonhosted.org/packages/e2/29/b8b1afd24d3447849bbee2f590bd56c8edd1a17792e260ce9e0a4c2508f7/denormalized-0.0.13-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:3f709712809b3b2bebe291182ca9aa3978cda483d9d020a1d7592c2a89864811", size = 27477598 },
 ]
 
 [package.optional-dependencies]
@@ -492,13 +492,14 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
+    { name = "feast-denormalized-tutorial" },
     { name = "jupyterlab" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "confluent-kafka", specifier = ">=2.6.1" },
-    { name = "denormalized", extras = ["feast"], specifier = ">=0.0.12" },
+    { name = "denormalized", extras = ["feast"], specifier = ">=0.0.13" },
     { name = "feast", specifier = ">=0.42.0" },
 ]
 
